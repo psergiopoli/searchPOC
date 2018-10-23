@@ -1,0 +1,11 @@
+import search.Person
+
+model {
+    Person person
+}
+
+json {
+    id person.id
+    name person.name
+    score person.fuzzyScore
+}

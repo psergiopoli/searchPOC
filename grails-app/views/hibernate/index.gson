@@ -1,0 +1,10 @@
+import search.Person
+
+model {
+    List<Person> personList = []
+}
+
+json {
+    total personList.size()
+    results tmpl.'/person/person'(personList.subList(0,personList.size() > 10 ? 10 : personList.size()))
+}
